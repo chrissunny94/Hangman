@@ -1,0 +1,26 @@
+
+(setq number 1)
+
+(setq i 1)
+
+
+(print number)
+
+
+
+
+
+
+
+(defun fact (number)
+	(setq temp 1)
+	
+  	(loop for i from 1 to number do 
+  		(setq temp (* i temp))
+  	)
+  	(print temp)
+ )
+      
+
+
+(fact 4)

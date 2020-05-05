@@ -1,0 +1,47 @@
+
+
+
+arp 
+"this will give us the ip and mac of the linux System"
+
+
+--------------------------------------------------------------------------
+
+
+ sudo /etc/init.d/networking stop
+ sudo ifconfig eth0 hw ether 02:01:02:03:04:08
+ sudo /etc/init.d/networking start 
+
+sudo macchanger -m b2:aa:0e:56:ed:f7 eth0
+
+
+
+MAC address's
+
+b8:76:3f:10:3a:23-vivek kunnan(first victim)
+4850733cd42zdyuj 
+84:7a:88:7f:47:9c-shahzad
+
+sudo ifconfig wlan0 txqueuelen 200
+sudo ifconfig eth0 txqueuelen 200
+
+
+	
+
+ ifconfig eth0 
+ "to confim the change"
+
+
+ifconfig wlan0 down
+sudo airmong-ng start wlan0
+
+
+
+ --------------------------------------------------------------------------
+
+ ifconfig eth0 192.168.1.5 netmask 255.255.255.0 up
+
+ "This will change the ip address of the linux system you are using"
+
+
+ netstat -nat | awk '{print $6}' | sort | uniq -c | sort -n

@@ -1,0 +1,19 @@
+#! /bin/bash
+#! Thanksfor using the script
+#! ChutzpaCreations 
+#! 2015 Sep 26
+
+printf "10.6.X.0-256 \n Enter X and press [Enter]:"
+read $x
+
+sudo nmap 10.6.$x.0/24 -sP
+
+netstat -s    
+
+
+
+ss -l
+
+how the mesh topology will be like?
+
+  So at the MAC layer , every device will be like a router . A router can  lisiten to multiple devices simultaneously .  

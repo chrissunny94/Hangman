@@ -1,0 +1,34 @@
+#! /bin/bash
+#! Thanksfor using the script
+#! ChutzpaCreations Co-k
+#! 2015 Sep 26
+
+printf "Your Connection will be disabled(y/n):"
+read var
+if [ $var -eq 1 ]
+then
+
+	sudo ifconfig wlan0 down
+	sudo /etc/init.d/networking stop
+	
+	sudo ifconfig wlan0 txqueuelen 500
+	sudo ifconfig eth0 txqueuelen 500
+
+	printf "(-) STUXNET (:) \nMAC address:"
+
+	read var
+
+	sudo macchanger -m $var wlan0
+	sudo ifconfig eth0 hw ether $var
+
+	sudo ifconfig wlan0 up
+
+
+	sudo iwconfig wlan0 essid Student
+
+
+	ifconfig wlan0
+else
+	printf "GoodBye Exiting!"
+
+fi

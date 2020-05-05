@@ -1,0 +1,10 @@
+sudo /etc/init.d/networking stop
+sudo ifconfig wlan0 hw ether 00:17:7c:19:5B:8F
+sudo macchanger -m 00:17:7c:19:5B:8F wlan0
+sudo ifconfig wlan0 up
+sudo /etc/init.d/networking start
+
+sudo iwconfig wlan0 essid LIBRARY
+
+
+ifconfig 
